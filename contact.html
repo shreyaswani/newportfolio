@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Shreyas Wani</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=IBM+Plex+Sans&family=Inter&family=Lato:wght@100;300;400&family=Open+Sans&family=Oswald&family=Poppins:wght@100;200;300;400;700&family=Roboto&family=Rubik:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="https://kit.fontawesome.com/80897816fd.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+</head>
+<body>
+    <main class="split-button2">       
+        <button id="movingButton" class="button2" ><i class="fa-solid fa-arrow-left" style="color: #5f5e5e; background-color: #ffffff; position: relative; left: 33.5%;"></i></a>
+        </button>
+      </main>
+
+
+    <main class="split-button">       
+        <button id="movingButton" class="button" onclick="toggleDropdownButton()">
+            <span id="chevron" class="chevron material-symbols-sharp" style="font-size: 30px; color: rgb(94, 94, 99);">expand_more</span>
+            
+          </span>
+        </button>
+        <section id="main-menu" class="main-menu movingButton">
+          <button class="btn" id="projecttt" onclick="handleMenuLabelButtonClicked()">
+            <i class="fa-solid fa-briefcase icon"></i>Projects
+          </button>
+          <button class="btn" id="abouttt" onclick="handleMenuLabelButtonClicked()">
+            <i class="fa-regular fa-user icon"></i>About
+          </button>
+        </section>
+      </main>
+
+
+    <h1 class="a firsttext">Get in Touch.</h1>
+    <p class="udertext">Ask a question, reach me? This contact form is here for that</p>
+<lottie-player src="https://lottie.host/d6766102-016f-4fcc-b69b-7a0ee79fb4ce/Z48Doc8Yvg.json" background="transparent" speed="1" style="width: 600px; height: 600px; position: absolute; top: 26vh; left: 12%; z-index: -1;" loop autoplay></lottie-player>
+<div class="aline"></div>
+
+
+<form action="" class="forms">
+    <div class="grid-item"><p class="input-label inside">Name</p>
+        <input type="text" class="name" id="input" name="name" required></div>
+
+        <div class="grid-item"><p class="input-label1 inside1">Email</p>
+    <input type="email" class="email" id="input1" name="email" required></div>
+
+    <div class="grid-item">
+        <p class="input-label2 inside2">Message</p>
+    <textarea name="message" class="message" id="input2" cols="30" rows="10"></textarea>
+</div>
+
+<button type="submit" class="fbtn">Send it!!</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+<script>
+    // oliver effect
+    const mainMenu = document.getElementById("main-menu"),
+      chevron = document.getElementById("chevron");
+      chevron.style.fontSize = '30px';
+      chevron.style.color = '#5e5e63';
+    const handleSplitButtonClicked = () => alert("Split Button Clicked!!!");
+    
+    const handleMenuLabelButtonClicked = () => {
+      toggleDropdownButton();
+    //   window.location.href = "index.html";
+    //   alert("Menu Label Button Clicked!!!");
+    };
+    
+    const toggleDropdownButton = () => {
+      mainMenu.classList.toggle("open");
+      
+      chevron.innerHTML = !mainMenu.classList.contains("open")
+        ? "expand_more"
+        : "close";
+    };
+    
+    //backbutton effect
+    document.addEventListener("DOMContentLoaded", function() {
+        const redirectButton = document.getElementById("movingButton");
+        redirectButton.addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const redirectButton = document.getElementById("abouttt");
+        redirectButton.addEventListener("click", function() {
+            window.location.href = "about.html";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const redirectButton = document.getElementById("projecttt");
+        redirectButton.addEventListener("click", function() {
+            window.location.href = "project.html";
+        });
+    });
+    
+    
+    
+    // oliver effect
+
+
+
+
+
+
+
+
+    var input = document.getElementById('input');
+var label = document.querySelector('.input-label');
+
+label.addEventListener('click', function(e){
+      input.focus();
+})
+
+input.addEventListener('focus', function() {
+  label.classList.add('active');
+  input.setAttribute('placeholder', 'John Smith');
+});
+input.addEventListener('blur', function() {
+  if (input.value === '') {
+    label.classList.remove('active');
+    input.removeAttribute('placeholder');
+  }
+});
+
+var input1 = document.getElementById('input1');
+var label1 = document.querySelector('.input-label1');
+
+label1.addEventListener('click', function(e){
+      input1.focus();
+})
+
+input1.addEventListener('focus', function() {
+  label1.classList.add('active1');
+  input1.setAttribute('placeholder', 'Johnsmith@example.com');
+});
+input1.addEventListener('blur', function() {
+  if (input1.value === '') {
+    label1.classList.remove('active1');
+    input1.removeAttribute('placeholder');
+  }
+});
+
+var input2 = document.getElementById('input2');
+var label2 = document.querySelector('.input-label2');
+
+label2.addEventListener('click', function(e){
+      input2.focus();
+})
+
+input2.addEventListener('focus', function() {
+  label2.classList.add('active2');
+  input2.setAttribute('placeholder', 'Your message...');
+});
+input2.addEventListener('blur', function() {
+  if (input2.value === '') {
+    label2.classList.remove('active2');
+    input2.removeAttribute('placeholder');
+  }
+});
+    </script>
+    <script src="indexx.js"></script>
+</body>
+</html>

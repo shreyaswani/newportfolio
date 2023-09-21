@@ -1,0 +1,27 @@
+@font-face {
+    font-family: myfont;
+    src: url('a.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('ab.svg'), auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main-content{
+    display: none;
+    visibility: hidden;
+}
+
+.imp{
+    font-family: myfont;
+    text-align: center;
+font: 7rem;
+margin-top: 45vh;
+}
